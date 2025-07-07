@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  },
+  "name": "decorator",
+  "version": "1.0.0",
+  "description": "## Add neccesary things to local files * git clone https://github.com/spiritfx69/decorator * cd decorator * npm init -y * npm install --save-dev typescript * npx tsc -v                                                 // check TS version * npm run build * npm start",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
