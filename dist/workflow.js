@@ -15,8 +15,6 @@ exports.Workflow = Workflow;
 const stepResults = new Map();
 // Step decorator: logs, memoizes step results
 function Step(target, propertyKey, descriptor) {
-    console.log("blehhhhhhhhhhhhhhhhhhhhhhhh" + propertyKey);
-    console.log("blehhhhhhhhhhhhhhhhhhhhhhhh" + descriptor);
     const originalMethod = descriptor.value;
     descriptor.value = function (...args) {
         return __awaiter(this, void 0, void 0, function* () {

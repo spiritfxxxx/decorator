@@ -9,14 +9,14 @@ class UserOnboardingWorkflow {
   }
 
 
-  //@Step
+  @Step
   async sendWelcomeEmail(userId: string) {
     console.log(`Sending welcome email to user: ${userId}`);
     return true;
   }
 
 
-  //@Workflow
+  @Workflow
   async onboardUser(name: string) {
     const user = await this.createUser(name);
     await this.sendWelcomeEmail(user.userId);

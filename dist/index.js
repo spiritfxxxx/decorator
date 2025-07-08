@@ -23,14 +23,12 @@ class UserOnboardingWorkflow {
             return { userId: "u-" + name.toLowerCase() };
         });
     }
-    //@Step
     sendWelcomeEmail(userId) {
         return __awaiter(this, void 0, void 0, function* () {
             console.log(`Sending welcome email to user: ${userId}`);
             return true;
         });
     }
-    //@Workflow
     onboardUser(name) {
         return __awaiter(this, void 0, void 0, function* () {
             const user = yield this.createUser(name);
@@ -41,6 +39,12 @@ class UserOnboardingWorkflow {
 __decorate([
     workflow_1.Step
 ], UserOnboardingWorkflow.prototype, "createUser", null);
+__decorate([
+    workflow_1.Step
+], UserOnboardingWorkflow.prototype, "sendWelcomeEmail", null);
+__decorate([
+    workflow_1.Workflow
+], UserOnboardingWorkflow.prototype, "onboardUser", null);
 // Run it
 const wf = new UserOnboardingWorkflow();
 wf.onboardUser("Alice").then(() => {
